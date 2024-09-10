@@ -38,4 +38,4 @@ jobs:
       run: |
         R -e 'install.packages("rsconnect")'
         R -e 'rsconnect::setAccountInfo(name="fabio-favoretto", token=Sys.getenv("SHINYAPPS_TOKEN"), secret=Sys.getenv("SHINYAPPS_SECRET"))'
-        R -e 'rsconnect::deployApp(appDir = ".", appName = "revillagigedo_app")'
+        R -e 'rsconnect::deployApp(appDir = ".", appName = "revillagigedo_app", forceUpdate = TRUE)'
