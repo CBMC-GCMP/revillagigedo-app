@@ -23,7 +23,7 @@ jobs:
 
     - name: Install R package dependencies
       run: |
-        R -e 'install.packages("remotes")'
+        R -e 'install.packages(c("remotes", "leaflet"))' # Add 'leaflet' here
         R -e 'remotes::install_deps(dependencies = TRUE)'
 
     - name: Check current directory and files
