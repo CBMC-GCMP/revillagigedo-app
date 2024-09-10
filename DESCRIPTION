@@ -1,0 +1,11 @@
+Package: revillagigedo_dashboard
+Type: Package
+Title: Dashboard for Revillagigedo National Park
+Version: 0.1.0
+Author: Fabio Favoretto
+Maintainer: Fabio Favoretto fabio@gocmarineprogram.org
+Description: A dashboard for visualizing data related to the Revillagigedo National Park.
+Depends: R (>= 4.0), shiny, rsconnect, other-package-names
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
