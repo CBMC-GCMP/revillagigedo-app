@@ -23,6 +23,8 @@ ui <- dashboardPage(
      ),
      dashboardBody(
           tags$head(
+               tags$link(rel = "shortcut icon", href = "faviconCON.png"),  # Reference the favicon here
+               tags$title("RNP-dashboard"),  # This will set the browser tab title to "RNP"
                tags$style(HTML('
         .skin-blue .main-header .navbar {
             background-color: #235B4E;
@@ -109,7 +111,8 @@ ui <- dashboardPage(
                tags$link(href = "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap", rel = "stylesheet")
           ),
           uiOutput("tabPanels")
-     )
+     ),
+     title = "RNP-dashboard"  # Add this to set the browser tab title to "RNP"
 )
 
 # Define Server Logic
@@ -119,7 +122,7 @@ server <- function(input, output, session) {
           list(
                fishing_activity_link = "https://datalake-cbmc-revillagigedo.s3.amazonaws.com/revillagigedo_dashboard/vms_revillagigedo_report_es.html",
                climate_change_link = "https://datalake-cbmc-revillagigedo.s3.amazonaws.com/revillagigedo_dashboard/revillagigedo_report_es.html",
-               rocky_reefs_link = "https://datalake-cbmc-revillagigedo.s3.amazonaws.com/revillagigedo_dashboard/rocky_reefs_monitoring_report_es.html",
+               bio_mon_link = "https://datalake-cbmc-revillagigedo.s3.amazonaws.com/revillagigedo_dashboard/rocky_reefs_monitoring_report_es.html",
                expedition_report_link = "https://datalake-cbmc-revillagigedo.s3.amazonaws.com/revillagigedo_dashboard/Expedicion_revillagigedo_2023_completa_final.pdf",
                research_link = "https://docs.google.com/spreadsheets/d/1hHpilcl1OB417mQp5hLs-qkWeIiq6b5aj-jMS4ZzM7Y/edit?usp=sharing"
           )
@@ -179,7 +182,7 @@ Descripción de las pestañas en el dashboard<br>
 <ul>
     <li>Monitoreo Embarcaciónes: visualización y análisis de la actividad de embarcaciones de pesca en Revillagigedo, mostrando su distribución espacial y temporal.</li>
     <li>Cambio Climático: datos y estudios sobre los efectos del cambio climático en el archipiélago.</li>
-    <li>Arrecifes Rocosos: información sobre la biodiversidad y conservación de los arrecifes rocosos en Revillagigedo.</li>
+    <li>Monitoreo Biológico: información sobre el monitoreo biológico en el Parque Nacional.</li>
     <li>Informe de Expedición: resúmenes de expediciones científicas con hallazgos clave y recomendaciones para futuras investigaciones.</li>
     <li>Investigación: acceso a listado de publicaciones, facilitando la colaboración y el intercambio de conocimientos.</li>
   </ul><br>
@@ -211,7 +214,43 @@ Descripción de las pestañas en el dashboard<br>
                       # Climate Change Tab
                       tabPanel("Cambio Climático", uiOutput("climate_change")),
                       # Rocky Reefs Tab
-                      tabPanel("Arrecifes Rocosos", uiOutput("rocky_reefs")),
+                      tabPanel("Monitoreo Biológico", 
+                               fluidRow(
+                                    column(12,
+                                           div(style = "background-image: url('link_to_background_image.jpg'); background-size: cover; background-position: center; padding: 20px; border-radius: 10px;",
+                                               
+                                           div(class = "landing-container",
+                                               div(class = "description-container",
+                                                   div(class = "description-box",
+                                                       # Add CSS for background image
+                                                       style = "background-image: url('background_green.png'); background-size: cover; background-position: center; padding: 20px;",
+                                                       
+                                                       # Center and style the title
+                                                       h3("Informes de Monitoreo Biológico", style = "text-align: center; color: black;"),
+                                                       div(class = "row",
+                                                           div(class = "col-md-4",
+                                                               div(style = "background-color: #ff9999; color: black; padding: 20px; margin: 10px; border-radius: 10px;",
+                                                                   tags$a(href = "https://datalake-cbmc-revillagigedo.s3.amazonaws.com/revillagigedo_dashboard/rocky_reefs_monitoring_report_es.html", target = "_blank", "Arrecifes rocosos", style = "color: black;")
+                                                               )
+                                                           ),
+                                                           div(class = "col-md-4",
+                                                               div(style = "background-color: #99ccff; color: black; padding: 20px; margin: 10px; border-radius: 10px;",
+                                                                   tags$a(href = "https://datalake-cbmc-revillagigedo.s3.amazonaws.com/revillagigedo_dashboard/Informe_Tortugas_PNR_2022.pdf", target = "_blank", "Tortugas Marinas", style = "color: black;")
+                                                               )
+                                                           ),
+                                                           div(class = "col-md-4",
+                                                               div(style = "background-color: #99ff99; color: black; padding: 20px; margin: 10px; border-radius: 10px;",
+                                                                   tags$a(href = "https://datalake-cbmc-revillagigedo.s3.amazonaws.com/revillagigedo_dashboard/mamiferos_marinos.pdf", target = "_blank", "Mamiferos Marinos", style = "color: black;")
+                                                               )
+                                                           )
+                                                       )
+                                                   )
+                                               )
+                                           )
+                                    )
+                               )
+                      )
+                      ),
                       # Expedition Report Tab
                       tabPanel("Informe de Expedición", uiOutput("expedition_report")),
                       # Research Tab
@@ -221,7 +260,7 @@ Descripción de las pestañas en el dashboard<br>
      
      # Fishing Activity report
      output$fishing_activity <- renderUI({
-          tags$iframe(src = text()$fishing_activity_link, style = "width: 100%; height: 1200px; border: none;")
+          tags$iframe(src = text()$fishing_activity_link, style = "width: 100%; height: 100vh; border: none;")
      })
      
      # Climate Change report
@@ -230,8 +269,8 @@ Descripción de las pestañas en el dashboard<br>
      })
      
      # Rocky Reefs report
-     output$rocky_reefs <- renderUI({
-          tags$iframe(src = text()$rocky_reefs_link, style = "width: 100%; height: 100vh; border: none;")
+     output$bio_mon <- renderUI({
+          tags$iframe(src = text()$bio_mon_link, style = "width: 100%; height: 100vh; border: none;")
      })
      
      # Expedition Report
