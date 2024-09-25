@@ -252,7 +252,34 @@ Descripción de las pestañas en el dashboard<br>
                       )
                       ),
                       # Expedition Report Tab
-                      tabPanel("Informe de Expedición", uiOutput("expedition_report")),
+                      tabPanel("Informe de Expedición", 
+                               fluidRow(
+                                    column(12,
+                                           div(style = "background-image: url('link_to_background_image.jpg'); background-size: cover; background-position: center; padding: 20px; border-radius: 10px;",
+                                               
+                                               div(class = "landing-container",
+                                                   div(class = "description-container",
+                                                       div(class = "description-box",
+                                                           
+                                                           # Add CSS for background image
+                                                           style = "background-image: url('background.png'); background-size: cover; background-position: center; padding: 20px;",
+                                                           
+                                                           # Center and style the title
+                                                           div(class = "row",
+                                                               div(class = "col-md-4",
+                                                                   div(style = "background-color: #009da6; color: black; padding: 20px; margin: 10px; border-radius: 10px; text-align: center; display: flex; justify-content: center; align-items: center; height: 150px;", # Added height to control box size and centering
+                                                                       tags$a(href = "https://datalake-cbmc-revillagigedo.s3.amazonaws.com/revillagigedo_dashboard/Expedicion_revillagigedo_2023_completa_final.pdf", target = "_blank", "2023", style = "color: black; font-size: 20px;")
+                                                                   )
+                                                               )
+                                                           )
+                                                       )
+                                                   )
+                                               )
+                                           )
+                                    )
+                               )
+                      )
+                      ,
                       # Research Tab
                       tabPanel("Investigación", uiOutput("research"))
           )
