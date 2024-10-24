@@ -201,7 +201,8 @@ Descripción de las pestañas en el dashboard<br>
                                                                style = "text-align: center; display: flex; justify-content: center;",
                                                                img(src = "scripps.png", alt = "Logo 1", style = "height:100px; padding: 5px;"),
                                                                img(src = "cbmc1.png", alt = "Logo 2", style = "height:100px; padding: 5px;"),
-                                                               img(src = "BNA-logo-full-blue-txt-transparent-300x.png", alt = "Logo 2", style = "height:100px; padding: 5px;")
+                                                               img(src = "BNA-logo-full-blue-txt-transparent-300x.png", alt = "Logo 2", style = "height:100px; padding: 5px;"),
+                                                               img(src = "betadiversidad.png", alt = "Logo 2", style = "height:100px; padding: 5px;")
                                                            )
                                                     )
                                                )
