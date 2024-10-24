@@ -156,12 +156,12 @@ server <- function(input, output, session) {
                                                        HTML("<p style='text-align: justify;'>
   <strong style='display: block; text-align: center; font-size: 30px;'>El Archipiélago de Revillagigedo:</strong><br>
   Constituye un conjunto de cuatro islas volcánicas situadas en el Océano Pacífico. Estas son reconocidas por albergar un 
-  ecosistema único y singular. Ubicadas aproximadamente a 458 kilómetros al sur y suroeste del municipio de Los Cabos, Baja 
+  ecosistema único y singular. Ubicadas aproximadamente a 458 kilómetros al suroeste del municipio de Los Cabos, Baja 
   California Sur, y a 698 kilómetros al oeste de Manzanillo, se encuentran en una posición remota y distante. Inicialmente 
   vinculadas al estado mexicano de Colima, fueron otorgadas en 1861 para establecer una colonia penal, pero actualmente son 
   propiedad y están bajo jurisdicción federal mexicana.<br><br>
   Decretado en noviembre de 2017 como Parque Nacional a cargo de la Comisión Nacional de Áreas Naturales Protegidas de
-  México, se convirtió en el área marina protegida de no pesca más grande de Norteamérica. Contando con importantes
+  México (CONANP), se convirtió en el área marina protegida de no pesca más grande de Norteamérica. Contando con importantes
   designaciones internacionales, las cuales reafirman la importancia del área:<br>
   <ul>
     <li>1996: Área de importancia para la anidación de Aves</li>
