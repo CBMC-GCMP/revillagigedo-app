@@ -1,0 +1,13 @@
+name: revillagigedo-app
+title: revillagigedo-app
+username: fabio-favoretto
+account: fabio-favoretto
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 12824302
+bundleId: 9145769
+url: https://fabio-favoretto.shinyapps.io/revillagigedo-app/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .github/workflows/deploy.yml

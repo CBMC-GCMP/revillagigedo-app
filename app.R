@@ -144,7 +144,7 @@ server <- function(input, output, session) {
                                     column(12,
                                            div(id = "acknowledgments",
                                                style = "text-align: center; display: flex; justify-content: center;",
-                                               img(src = "gop_conanp_logos.png", alt = "Logo 1", style = "height:100px; padding: 5px;")
+                                               img(src = "government_logos.jpg", alt = "Logo 1", style = "height:100px; padding: 5px;")
                                            )
                                     )
                                ),
@@ -199,8 +199,9 @@ Descripción de las pestañas en el dashboard<br>
                                                     column(12,
                                                            div(id = "acknowledgments",
                                                                style = "text-align: center; display: flex; justify-content: center;",
-                                                               img(src = "scripps.png", alt = "Logo 1", style = "height:100px; padding: 5px;"),
-                                                               img(src = "cbmc1.png", alt = "Logo 2", style = "height:100px; padding: 5px;"),
+                                                               img(src = "logoPNR.png", alt = "Logo 1", style = "height:100px; padding: 5px;"),
+                                                               img(src = "UCSD-SIO_Hrizontal-Color_RGB.png", alt = "Logo 1", style = "height:100px; padding: 5px;"),
+                                                               img(src = "cbmc.png", alt = "Logo 2", style = "height:80px; padding: 5px;"),
                                                                img(src = "BNA-logo-full-blue-txt-transparent-300x.png", alt = "Logo 2", style = "height:100px; padding: 5px;"),
                                                                img(src = "betadiversidad.png", alt = "Logo 2", style = "height:100px; padding: 5px;")
                                                            )
