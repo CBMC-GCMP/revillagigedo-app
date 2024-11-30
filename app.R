@@ -27,12 +27,12 @@ ui <- dashboardPage(
                tags$title("RNP-dashboard"),  # This will set the browser tab title to "RNP"
                tags$style(HTML('
         .skin-blue .main-header .navbar {
-            background-color: #235B4E;
-            height: 80px;  /* Adjust this to your desired height */
+            background-color: #024896;
+            height: 60px;  /* Adjust this to your desired height */
         }
         .skin-blue .main-header .logo {
-            background-color: #235B4E;
-            height: 80px;  /* Adjust this to match the navbar height */
+            background-color: #024896;
+            height: 60px;  /* Adjust this to match the navbar height */
         }
         .skin-blue .main-header .logo .logo-lg {
             font-size: 40px;  /* You can adjust the font size here */
@@ -57,7 +57,7 @@ ui <- dashboardPage(
             background-size: cover;
             background-position: center;
             width: 100%;
-            height: 600px;
+            height: 200px;
             position: relative;
             display: flex;
             align-items: center;
@@ -135,7 +135,7 @@ server <- function(input, output, session) {
                                fluidRow(
                                     column(12,
                                            div(class = "landing-background",
-                                               h1("Bienvenidos al Parque Nacional Revillagigedo", style = "font-size: 50px;")
+                                               h1(" ", style = "font-size: 50px;")
                                            )
                                     )
                                ),
@@ -199,11 +199,11 @@ Descripción de las pestañas en el dashboard<br>
                                                     column(12,
                                                            div(id = "acknowledgments",
                                                                style = "text-align: center; display: flex; justify-content: center;",
-                                                               img(src = "logoPNR.png", alt = "Logo 1", style = "height:100px; padding: 5px;"),
-                                                               img(src = "UCSD-SIO_Hrizontal-Color_RGB.png", alt = "Logo 1", style = "height:100px; padding: 5px;"),
-                                                               img(src = "cbmc.png", alt = "Logo 2", style = "height:80px; padding: 5px;"),
-                                                               img(src = "BNA-logo-full-blue-txt-transparent-300x.png", alt = "Logo 2", style = "height:100px; padding: 5px;"),
-                                                               img(src = "betadiversidad.png", alt = "Logo 2", style = "height:100px; padding: 5px;")
+                                                               img(src = "logoPNR.png", alt = "Logo 1", style = "height:80px; padding: 5px;"),
+                                                               img(src = "UCSD-SIO_Hrizontal-Color_RGB.png", alt = "Logo 1", style = "height:80px; padding: 5px;"),
+                                                               img(src = "cbmc.png", alt = "Logo 2", style = "height:60px; padding: 5px;"),
+                                                               img(src = "BNA-logo-full-blue-txt-transparent-300x.png", alt = "Logo 2", style = "height:80px; padding: 5px;"),
+                                                               img(src = "betadiversidad.png", alt = "Logo 2", style = "height:80px; padding: 5px;")
                                                            )
                                                     )
                                                )
